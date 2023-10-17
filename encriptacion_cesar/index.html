@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Cifrado César</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="encriptacion.css">
+    <script src="scrip.js"></script>
+  </head>
+  <body>
+
+    <div name="contenedor">
+      <h1>Cifrado César</h1>
+      <label for="texto">Texto a cifrar/descifrar:</label>
+      <input type="text" id="texto" required />
+      <br />
+      <label for="offset">Desplazamiento:</label>
+      <input type="number" id="offset" required />
+      <br />
+      <label for="accion">Accion:</label>
+      <select id="accion" required>
+        <option value="encriptar">Encriptar</option>
+        <option value="desencriptar">Desencriptar</option>
+      </select>
+      <br />
+      <button id="accionButton" onclick="cifrarDescifrar()">
+        Realizar Acción
+      </button>
+      <br />
+      <p>Resultado: <span id="resultado"></span></p>
+    </div>
+
+    <script>
+      const textoInput = document.getElementById("texto");
+      const offsetInput = document.getElementById("offset");
+      const accionSelect = document.getElementById("accion");
+      const accionButton = document.getElementById("accionButton");
+
+      // Función para habilitar/deshabilitar el botón según la validez de los campos
+      function validarCampos() {
+        if (
+          textoInput.validity.valid &&
+          offsetInput.validity.valid &&
+          accionSelect.validity.valid
+        ) {
+          accionButton.removeAttribute("disabled");
+        } else {
+          accionButton.setAttribute("disabled", "true");
+        }
+      }
+
+      // Agrega event listeners a los campos para validarlos en tiempo real
+      textoInput.addEventListener("input", validarCampos);
+      offsetInput.addEventListener("input", validarCampos);
+      accionSelect.addEventListener("change", validarCampos);
+
+      // Llama a la función de validación inicial
+      validarCampos();
+
+      // Función de cifrado/descifrado
+      function cifrarDescifrar() {
+        // Tu función de cifrado/descifrado aquí
+      }
+    </script>
+  </body>
+</html>

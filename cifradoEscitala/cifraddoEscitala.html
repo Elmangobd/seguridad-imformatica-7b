@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Cifrado César</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="encriptacion.css">
+    <link rel="stylesheet" href="escitla.css">
+    <script src="./escitala.js"></script>
+  </head>
+  <header>
+    
+  </header>
+  <body>
+    <h1>Cifrado de Escítala</h1>
+    <p style="color: white;">El método de cifrado de transposición a través de la Escítala es una técnica de cifrado antigua que funciona de la siguiente manera:</p>
+    <p>es un método simple que se basa en la reorganización de las letras del mensaje en una matriz y su posterior recuperación. Sin los parámetros específicos del orden de la matriz, 
+        descifrar el mensaje antes era difícil. hoy en dia se considera inseguro para proteger información sensible debido a su simplicidad.
+
+    </p>
+
+    <label for="lados">Lados del prisma (entero): </label>
+    <input type="text" id="lados" placeholder="Número de lados"><br>
+
+    <label for="vueltas">Vueltas (entero): </label>
+    <input type="text" id="vueltas" placeholder="Número de vueltas"><br>
+
+    <button onclick="calcularCaracteres()">Calcular Caracteres</button>
+
+    <p>Número de caracteres permitidos: <span id="caracteresPermitidos">0</span></p>
+
+    <label for="mensaje">Mensaje (máximo <span id="caracteresPermitidosLabel">0</span> caracteres):</label>
+    <textarea id="mensaje" rows="4" cols="50"></textarea><br>
+
+    <button onclick="cifrarMensaje()">Cifrar</button>
+    <button onclick="descifrarMensaje()">Descifrar</button>
+
+    <p>Resultado: <span id="resultado"></span></p>
+</body>
+</html>

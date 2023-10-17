@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Cifrado César</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="encriptacion.css">
+  <script src="scrip.js"></script>
+</head>
+<style>
+    body {
+      margin: 0;
+      padding: 0;
+      justify-content: center;
+      align-items: center;
+
+    }
+
+    .boton-container {
+      text-align: center;
+      width: 100%;
+    }
+
+    .boton-enlace {
+      display: inline-block;
+      text-decoration: none;
+      padding: 10px 20px;
+      background-color: #00FF00; /* Verde fluorescente */
+      color: #000; /* Letras negras */
+      border: none;
+      margin: 10px; /* Espacio entre botones */
+      font-size: larger;
+    }
+    @media (max-width: 768px) {
+      .boton-enlace {
+        padding: 8px 16px; /* Ajuste para pantallas más pequeñas */
+      }
+    }
+  p {
+    color: white;
+    font-size: medium;
+  }
+
+  header {
+    background: #111;
+    /* Fondo oscuro */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+  }
+
+
+
+  div[name="logo"] {
+    text-align: right;
+  }
+
+  img {
+    width: 100px;
+    /* Tamaño de la imagen de perfil */
+    border-radius: 50%;
+    /* Forma circular para la imagen */
+    border: 2px solid #00ff00;
+    /* Borde verde fluorescente */
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+
+
+</style>
+
+<header>
+  <div name="">
+    <P>Jesus Ivan Bautista Hernadez 7º B </P>
+  </div>
+  <div name="logo">
+    <img src="./imagenes//perrito.png" alt="">
+  </div>
+</header>
+<body style="background-color: #000;">
+
+  <div class="boton-container">
+    <a href="./encriptacion_cesar/index.html" class="boton-enlace">Encriptación César</a>
+    <a href="./cifradoEscitala/cifraddoEscitala.html" class="boton-enlace">Encriptación Escítala</a>
+  </div>
+</body>
+
+</html>
